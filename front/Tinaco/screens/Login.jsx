@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Logo from '../assets/logo.png';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Login = () => {
+  const navigation = useNavigation();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Aquí puedes implementar la lógica de autenticación
+    navigation.navigate('Home');
     console.log('Usuario:', username);
     console.log('Contraseña:', password);
   };
 
   const handleRegister = () => {
-    // Aquí puedes implementar la navegación a la pantalla de registro
+    navigation.navigate('RegistroUsuario');
     console.log('Navegar a la pantalla de registro');
   };
 
