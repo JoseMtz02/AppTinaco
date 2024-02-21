@@ -12,7 +12,10 @@ const AboutUsScreen = () => {
         Nuestra misión es ofrecer productos y servicios de alta calidad que satisfagan las necesidades y expectativas de nuestros clientes.
       </Text>
       <Text style={styles.description}>
-        Para más información, contáctenos en info@empresa.com
+        Nuestra misión es ofrecer productos y servicios de alta calidad que satisfagan las necesidades y expectativas de nuestros clientes.
+      </Text>
+      <Text style={styles.description}>
+        Para más información, contáctenos en Rotomotor@gmail.com
       </Text>
     </View>
   );
@@ -23,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#AED6F1',
     padding: 20,
   },
   title: {

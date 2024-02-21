@@ -72,7 +72,12 @@ const EditProfileScreen = () => {
         placeholder="Contraseña"
         secureTextEntry
       />
-      <Button title="Guardar Cambios" onPress={handleSaveChanges} />
+      <Button
+    title="Guardar Cambios"
+    onPress={handleSaveChanges}
+    color="#2471A3"
+/>
+
     </View>
   );
 };
@@ -82,7 +87,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#D4E6F1',
   },
   title: {
     fontSize: 24,
@@ -91,9 +96,9 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '80%',
-    height: 40,
-    borderWidth: 1,
-    borderColor: '#ccc',
+    height: 45,
+    borderWidth: 2,
+    borderColor: '#48C9B0',
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,

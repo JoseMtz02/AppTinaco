@@ -28,7 +28,7 @@ const EstadoTinaco = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Simulación de Tinaco</Text>
+      <Text style={[styles.title, { marginTop: 10, marginBottom: 60 }]}>Estado del tinaco N°1</Text>
       <View style={styles.tankContainer}>
         <View style={styles.waterLevel}>
           <Animated.View style={[styles.water, { height: interpolatedValue }]} />
@@ -44,6 +44,7 @@ const EstadoTinaco = () => {
           onValueChange={toggleSwitch}
           value={switchValue}
         />
+         <Text style={styles.fugaText}>Fuga: NINGUNA</Text>
       </View>
     </View>
   );
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#D0ECE7',
   },
   title: {
     fontSize: 24,
@@ -62,20 +63,20 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   tankContainer: {
-    width: 150,
-    height: 300,
+    width: 170,
+    height: 270,
     backgroundColor: '#d3d3d3',
     justifyContent: 'flex-end',
     alignItems: 'center',
     marginBottom: 20,
   },
   tank: {
-    width: 120,
-    height: 250,
-    backgroundColor: '#fff',
-    borderColor: '#000',
-    borderTopWidth: 2,
-    borderBottomWidth: 2,
+    width: 280,
+    height: 240,
+    backgroundColor: '#FDFEFE',
+    borderColor: '#037295',
+    borderTopWidth: 0,
+    borderBottomWidth: 225,
   },
   waterLevel: {
     width: '100%',
@@ -95,6 +96,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginRight: 10,
   },
+  fugaText: {
+    fontSize: 20,
+    marginTop: 5,
+    marginBottom: 10, 
+    color: 'black',
+  }  
 });
 
 export default EstadoTinaco;

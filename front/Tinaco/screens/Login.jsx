@@ -43,10 +43,13 @@ const Login = () => {
           value={password}
           onChangeText={setPassword}
         />
-        <Button title="Ingresar" onPress={handleLogin} />
-        <TouchableOpacity onPress={handleRegister}>
-          <Text style={styles.registerText}>¿No tienes una cuenta? Regístrate aquí</Text>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>INGRESAR</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={handleRegister}>
+        <Text style={styles.registerText}>¿No tienes una cuenta? <Text style={{fontWeight: 'bold'}}>Regístrate aquí</Text></Text>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
@@ -55,7 +58,7 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center', // Centra verticalmente el contenido
+    justifyContent: 'center', // Parte de arriba
     alignItems: 'center',
     backgroundColor: '#F5F5F5',
   },
@@ -67,11 +70,12 @@ const styles = StyleSheet.create({
     top: 20,
   },
   card: {
-    backgroundColor: '#003785',
-    borderRadius: 10,
-    padding: 80,
+    backgroundColor: '#003785', // Parte de abajo
+    borderTopLeftRadius: 35, // Redondear la esquina superior izquierda
+    borderTopRightRadius: 35, // Redondear la esquina superior derecha
+    padding: 75,
     width: '100%',
-    alignItems: '', // Centra horizontalmente el card
+    alignItems: 'center', // Centra horizontalmente el card
     marginBottom: '', // Coloca el card en la mitad de la pantalla hacia abajo
     marginTop: 'auto', // Coloca el card en la mitad de la pantalla hacia arriba
     shadowColor: '#000',
@@ -87,16 +91,16 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 30,
     textAlign: 'center',
   },
   input: {
     backgroundColor: '#F5F5F5',
     width: '135%',
-    height: 40,
-    borderColor: '#DDD',
+    height: 50,
+    borderColor: '#44C7B6',
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 20,
     marginBottom: 20,
     paddingLeft: 20,
     alignSelf: 'center'
@@ -106,6 +110,18 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: '#FFFF',
   },
+  button: {
+    backgroundColor: '#44C7B6',
+    padding: 8,
+    borderRadius: 40,
+    alignItems: 'center',
+    width: 150,
+  },
+  buttonText: {
+    color: '#000000',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },  
 });
 
 export default Login;
